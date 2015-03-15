@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Thu Feb  5 14:39:07 2015 tiphaine perra
-** Last update Sun Mar 15 20:42:26 2015 tiphaine perra
+** Last update Sun Mar 15 21:22:26 2015 tiphaine perra
 */
 
 #ifndef	RTV1_H
@@ -68,7 +68,6 @@ typedef struct	s_obj
   double	ry;
   double	rz;
   double	ang;
-  struct s_obj	*next;
 }		t_obj;
 
 double		compare(t_obj *);
