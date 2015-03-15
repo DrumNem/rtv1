@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Mon Mar  2 15:05:46 2015 tiphaine perra
-** Last update Sun Mar 15 16:48:42 2015 tiphaine perra
+** Last update Sun Mar 15 19:35:40 2015 tiphaine perra
 */
 
 #include <stdio.h>
@@ -97,7 +97,8 @@ int		main()
   x = 0;
   ob.d = 1000000000;
   eye.color = 0x000000;
-  wi.mlx_ptr = mlx_init();
+  if ((wi.mlx_ptr = mlx_init()) == NULL)
+    return (0);
   wi.img_ptr = mlx_new_image(wi.mlx_ptr, WINX, WINY);
   wi.data = (int*)mlx_get_data_addr(wi.img_ptr, &bpp, &size_line, &endian);
   wi.win_ptr = mlx_new_window(wi.mlx_ptr, WINX, WINY, "rtv1");

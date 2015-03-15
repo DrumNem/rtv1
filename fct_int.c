@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Mon Mar  2 15:49:21 2015 tiphaine perra
-** Last update Sun Mar 15 16:26:57 2015 tiphaine perra
+** Last update Sun Mar 15 19:32:10 2015 tiphaine perra
 */
 
 #include <stdio.h>
@@ -59,6 +59,7 @@ void             inter_sphere(t_obj *ob, t_eye *eye)
 
 void		inter_cylindre(t_obj *ob, t_eye *eye)
 {
+  transla(eye, -530, 0, 0);
   ob->R = 45;
   ob->a = pow(eye->vx, 2) + pow(eye->vy, 2);
   ob->b = (2 * (eye->cpx * eye->vx)) + (2 * (eye->cpy * eye->vy));
@@ -79,7 +80,7 @@ void		inter_cylindre(t_obj *ob, t_eye *eye)
 void		inter_cone(t_obj *ob, t_eye *eye)
 {
 
-  transla(eye, -650, 200, -250);
+  transla(eye, -650, -200, -250);
   ob->ang = 80;
   ob->a = pow(eye->vx, 2) + pow(eye->vy, 2)
     - (pow(eye->vz, 2) / pow(tan(PI * ob->ang / 180), 2));
