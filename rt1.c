@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Mon Mar  2 15:05:46 2015 tiphaine perra
-** Last update Sat Mar 14 18:46:37 2015 tiphaine perra
+** Last update Sun Mar 15 16:48:42 2015 tiphaine perra
 */
 
 #include <stdio.h>
@@ -42,7 +42,8 @@ int		calc(t_eye *eye, int x, int y, t_obj *ob)
   inter_plan(ob, eye);
   inter_cylindre(ob, eye);
   inter_cone(ob, eye);
-  return (ob->color);
+  ope_lum(ob, eye);
+  return (eye->color);
 }
 
 void            my_pixel_put_to_image(int x, int y, t_wi *wi, int color)
@@ -73,18 +74,10 @@ int		remplis_image(t_wi *wi, t_eye *eye, t_obj *ob)
       while (y <= WINY)
 	{
 	  ob->d = 1000000000;
-	  ob->color = 0x000000;
+	  eye->color = 0x000000;
 	  my_pixel_put_to_image(x, y, wi, calc(eye, x, y, ob));
 	  y++;
 	}
-      if (x == 100)
-	puts("Please wait : 25%");
-      else if (x == 200)
-	puts("Please wait : 50%");
-      else if (x == 300)
-	puts("Please wait : 75%");
-      else if (x == 400)
-	puts("Please wait : 100%");
       x++;
     }
   return (0);
@@ -103,7 +96,7 @@ int		main()
 
   x = 0;
   ob.d = 1000000000;
-  ob.color = 0x000000;
+  eye.color = 0x000000;
   wi.mlx_ptr = mlx_init();
   wi.img_ptr = mlx_new_image(wi.mlx_ptr, WINX, WINY);
   wi.data = (int*)mlx_get_data_addr(wi.img_ptr, &bpp, &size_line, &endian);

@@ -5,13 +5,14 @@
 ## Login   <perra_t@epitech.net>
 ## 
 ## Started on  Fri Oct 24 19:00:03 2014 tiphaine perra
-## Last update Sat Mar 14 17:44:25 2015 tiphaine perra
+## Last update Sun Mar 15 16:41:35 2015 tiphaine perra
 ##
 
 SRC	=	rt1.c \
 		rotate.c \
 		fct_int.c \
-		gere.c
+		gere.c \
+		lum.c
 
 OBJS	=	$(SRC:.c=.o)
 
@@ -21,7 +22,7 @@ CC	+=	-g -lm
 
 LDFLAGS	+=	-L minilibx/   -L usr/lib64/X11
 
-LDLIBS	+=	-lmlx -lXext -lX11
+LDLIBS	+=	-lmlx -lXext -lX11 -lm
 
 NAME	=	rt1
 

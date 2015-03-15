@@ -5,11 +5,9 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Thu Mar 12 17:42:44 2015 tiphaine perra
-** Last update Sat Mar 14 18:55:22 2015 tiphaine perra
+** Last update Sun Mar 15 17:48:29 2015 tiphaine perra
 */
 
-#include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
 #include "mlx.h"
 #include "rtv1.h"

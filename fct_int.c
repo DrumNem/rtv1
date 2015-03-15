@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Mon Mar  2 15:49:21 2015 tiphaine perra
-** Last update Sat Mar 14 19:45:38 2015 tiphaine perra
+** Last update Sun Mar 15 16:26:57 2015 tiphaine perra
 */
 
 #include <stdio.h>
@@ -19,7 +19,7 @@ int             inter_plan(t_obj *ob, t_eye *eye)
   ob->z = 0;
   ob->k = -(eye->ze / eye->vz);
   if (eye->vz ==0 && eye->ze == 0)
-    ob->color = 0x0000FF;
+    eye->color = 0x0000FF;
   if (ob->k < 0.00001)
     return (1);
   else
@@ -27,7 +27,7 @@ int             inter_plan(t_obj *ob, t_eye *eye)
       if (ob->k > 0 && ob->k < ob->d)
         {
           ob->d = ob->k;
-          ob->color = 0x0000FF;
+          eye->color = 0x0000FF;
         }
     }
   return (0);
@@ -50,7 +50,7 @@ void             inter_sphere(t_obj *ob, t_eye *eye)
       if (compare(ob) != 0 && compare(ob) < ob->d)
         {
           ob->d = compare(ob);
-          ob->color = 0xF9BFDF;
+          eye->color = 0xF9BFDF;
         }
       else
 	return;
@@ -71,7 +71,7 @@ void		inter_cylindre(t_obj *ob, t_eye *eye)
       if (compare(ob) != 0 && compare(ob) < ob->d)
         {
           ob->d = compare(ob);
-          ob->color = 0x935535;
+          eye->color = 0x935535;
         }
     }
 }
@@ -95,7 +95,7 @@ void		inter_cone(t_obj *ob, t_eye *eye)
       if (compare(ob) != 0 && compare(ob) < ob->d)
         {
           ob->d = compare(ob);
-          ob->color = 0xB2F0E3;
+          eye->color = 0xB2F0E3;
         }
     }
 }
