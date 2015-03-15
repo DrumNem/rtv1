@@ -5,7 +5,7 @@
 ## Login   <perra_t@epitech.net>
 ## 
 ## Started on  Fri Oct 24 19:00:03 2014 tiphaine perra
-## Last update Sun Mar 15 16:41:35 2015 tiphaine perra
+## Last update Sun Mar 15 20:36:25 2015 tiphaine perra
 ##
 
 SRC	=	rt1.c \
@@ -18,7 +18,7 @@ OBJS	=	$(SRC:.c=.o)
 
 CFLAGS	+=	-I ./include/
 
-CC	+=	-g -lm
+CC	+=	-g
 
 LDFLAGS	+=	-L minilibx/   -L usr/lib64/X11
 
