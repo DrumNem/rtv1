@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Fri Mar 13 11:27:52 2015 tiphaine perra
-** Last update Sun Mar 15 20:36:09 2015 tiphaine perra
+** Last update Sun Mar 15 20:41:22 2015 tiphaine perra
 */
 
 #include <math.h>
@@ -22,9 +22,6 @@ void		ope_lum(t_obj *ob, t_eye *eye)
   eye->vxlum = - (eye->interx - eye->xlum);
   eye->vylum = - (eye->intery - eye->ylum);
   eye->vzlum = - (eye->interz - eye->zlum);
-  eye->x2 = eye->interx + ob->d * eye->vxlum;
-  eye->y2 = eye->intery + ob->d * eye->vylum;
-  eye->z2 = eye->interz + ob->d * eye->vzlum;
   vect_nor(eye, ob);
 }
 

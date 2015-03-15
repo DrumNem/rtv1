@@ -5,7 +5,7 @@
 ## Login   <perra_t@epitech.net>
 ## 
 ## Started on  Fri Oct 24 19:00:03 2014 tiphaine perra
-## Last update Sun Mar 15 20:36:25 2015 tiphaine perra
+## Last update Sun Mar 15 20:43:46 2015 tiphaine perra
 ##
 
 SRC	=	rt1.c \
@@ -24,7 +24,7 @@ LDFLAGS	+=	-L minilibx/   -L usr/lib64/X11
 
 LDLIBS	+=	-lmlx -lXext -lX11 -lm
 
-NAME	=	rt1
+NAME	=	rtv1
 
 .PHONY:	all clean fclean re
 

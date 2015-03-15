@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Thu Feb  5 14:39:07 2015 tiphaine perra
-** Last update Sun Mar 15 19:33:50 2015 tiphaine perra
+** Last update Sun Mar 15 20:42:26 2015 tiphaine perra
 */
 
 #ifndef	RTV1_H
@@ -14,10 +14,6 @@
 #define PI 3.141592653589793
 #define WINX 920
 #define WINY 800
-#define PLANE 1
-#define SPHERE 2
-#define CYL 3
-#define CONE 4
 
 typedef struct	s_window
 {
@@ -45,9 +41,6 @@ typedef struct	s_eye
   double	vxlum;
   double	vylum;
   double	vzlum;
-  double	x2;
-  double	y2;
-  double	z2;
   double	cpx;
   double	cpy;
   double	cpz;
@@ -75,7 +68,6 @@ typedef struct	s_obj
   double	ry;
   double	rz;
   double	ang;
-  int		color;
   struct s_obj	*next;
 }		t_obj;
 
