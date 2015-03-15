@@ -5,7 +5,7 @@
 ** Login   <perra_t@epitech.net>
 ** 
 ** Started on  Mon Mar  2 16:20:22 2015 tiphaine perra
-** Last update Sat Mar 14 19:40:21 2015 tiphaine perra
+** Last update Sun Mar 15 20:24:43 2015 tiphaine perra
 */
 
 #include <stdio.h>
@@ -97,8 +97,8 @@ void	rotate_x(t_eye *eye, double ang)
 
 void	rotate(t_obj *ob, t_eye *eye)
 {
-  ob->rx = 0;
-  ob->ry = -90;
+  ob->rx = 40;
+  ob->ry = 0;
   ob->rz = 0;
   eye->tmp_x = eye->vx;
   eye->tmp_y = eye->vy;
